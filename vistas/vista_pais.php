@@ -11,7 +11,7 @@
     <div class="group-form">
     <form action="">
     <input name="nombre" type="text" class="form-control" placeholder="Write Here">
-    <button name="buscar" class="btn btn-primary">Search</button>
+    <button name="buscar" class="btn btn-primary">Buscar</button>
     </form>
     </div>
 </div>
