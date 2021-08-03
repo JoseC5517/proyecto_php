@@ -1,10 +1,19 @@
 <?php require_once "partes/head.php"; ?>
 
+<input type="checkbox" id="menu-toggle"/>
+  <label id="trigger" for="menu-toggle"></label>
+  <label id="burger" for="menu-toggle"></label>
+  <ul id="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
 
 <aside>
         <div class="">
             <div class="container">
-                <h1 class="display-3 py-5"><?php echo $pagina; ?></h1>
+                <h1 class=""><?php echo $pagina; ?></h1>
             </div>
         </div>
         
@@ -27,7 +36,7 @@
         <div class="container">
             <div class="group-form">
             <form class="formBuscar" action="">
-            <input name="nombre" type="text" class="" placeholder="Write Here">
+            <input name="nombre" type="text" class="form-control" placeholder="Write Here">
             <button name="buscar" class="btn btn-primary">Search</button>
             </form>
             </div>
@@ -64,14 +73,5 @@
         </div>
         
       </aside>
-      <input type="checkbox" id="menu-toggle"/>
-        <label id="trigger" for="menu-toggle"></label>
-        <label id="burger" for="menu-toggle"></label>
-        <ul id="menu">
-          <li><a href="actores.php">Actores</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
 
 <?php require_once "vistas/partes/foot.php"; ?>
