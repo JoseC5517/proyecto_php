@@ -14,7 +14,7 @@
             </div>
             <div class="group-form container">
                 <label for="">Apellido</label>
-                <input name="nombre" type="text" class="form-control" placeholder="Ej: Guayacan.">
+                <input name="apellido" type="text" class="form-control" placeholder="Ej: Guayacan.">
             </div>
             <br>
             <div class= "container">
@@ -28,6 +28,9 @@
     <input name="nombre" type="text" class="form-control" placeholder="Write Here">
     <button name="buscar" class="btn btn-primary">Search</button>
     </form>
+    </div>
+    <div><?php echo $_SESSION['mensaje'] ?? ""; ?> </div>
+</div>
     </div>
 </div>
 
@@ -57,7 +60,5 @@
   </tbody>
 </table>
 </div>
-</div>
-    <div><?php echo $_SESSION['mensaje'] ?? ""; ?> </div>
-</div>
+
 <?php require_once "vistas/partes/foot.php"; ?>
