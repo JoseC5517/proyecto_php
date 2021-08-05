@@ -4,7 +4,7 @@
   <label id="trigger" for="menu-toggle"></label>
   <label id="burger" for="menu-toggle"></label>
   <ul id="menu">
-    <li><a href="actores.php">Actores</a></li>
+    <li><a class="activo" href="actores.php">Actores</a></li>
     <li><a href="categoria.php">Categorias</a></li>
     <li><a href="pais.php">Pais</a></li>
     <li><a href="lenguaje.php">Idiomas</a></li>

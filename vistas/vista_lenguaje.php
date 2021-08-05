@@ -8,7 +8,7 @@
     <li><a href="actores.php">Actores</a></li>
     <li><a href="categoria.php">Categorias</a></li>
     <li><a href="pais.php">Pais</a></li>
-    <li><a href="lenguaje.php">Idiomas</a></li>
+    <li><a class="activo" href="lenguaje.php">Idiomas</a></li>
   </ul>
 <div class="web">
 <div class="">

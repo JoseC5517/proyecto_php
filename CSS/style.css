@@ -191,3 +191,8 @@ hr{
     width: 95%;
 
 }
+
+a.activo{
+    text-decoration: dashed;
+    color: rgb(9, 226, 208);
+}
