@@ -17,3 +17,12 @@ function obtenerPaisesPorNombre($conexion, $nombre) {
 
     return $resultado;
 }
+
+function insertarPais($conexion, $datos){
+    $query ="INSERT INTO country (country)
+            VALUES ('{$datos['nombre']}')";
+
+    $resultado = mysqli_query($conexion, $query);
+
+    return $resultado;
+}

@@ -17,3 +17,12 @@ function obtenerLenguajesPorNombre($conexion, $nombre) {
 
     return $resultado;
 }
+
+function insertarLenguaje($conexion, $datos){
+    $query ="INSERT INTO language (name)
+            VALUES ('{$datos['nombre']}')";
+
+    $resultado = mysqli_query($conexion, $query);
+
+    return $resultado;
+}

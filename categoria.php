@@ -14,7 +14,7 @@ if (isset($_GET['buscar'])) {
 if (isset($_POST['guardar'])) {
     $nombre = $_POST['nombre'] ?? "";
     
-    $datos = 'nombre';
+    $datos = compact('nombre');
     
     $insertado = insertarCategoria($conexion, $datos);
     
@@ -24,5 +24,6 @@ if (isset($_POST['guardar'])) {
         $_SESSION['mensaje'] = 'Datos NO INSERTADOS' ;
     }
     }
+
 #incluir la vista
 require_once 'vistas/vista_categoria.php';

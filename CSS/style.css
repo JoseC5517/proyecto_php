@@ -150,14 +150,14 @@ body {
 } */
 
 .formBuscar{
-    padding-left: 20%;
+    padding-left: 60px;
     display: flex;
     padding-bottom: 10px;
 
 }
 
 .hola{
-    width: 100%;
+    width: 1000px;
     height: 40px;
     border-radius: 5px;
     border-style:unset;

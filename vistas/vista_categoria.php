@@ -26,7 +26,8 @@
                         <button name="guardar" class="adios">Guardar</button>
                     </div>
                 </form>
-                <div class = "bye container"><?php echo $_SESSION['mensaje'] ?? ""; ?> </div>
+                <div class = "bye container">
+                  <?php echo $_SESSION['mensaje'] ?? ""; ?> </div>
         <br>
         <div class="container">
             <div class="group-form">
