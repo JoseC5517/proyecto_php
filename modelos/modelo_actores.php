@@ -18,6 +18,14 @@ function obtenerActoresPorNombre($conexion, $nombre) {
     return $resultado;
 }
 
+function obtenerActoresPorId($conexion, $id) {
+    $query = "SELECT * FROM actor WHERE actor_id = $id";
+
+    $resultado = mysqli_query($conexion,$query);
+
+    return $resultado;
+}
+
 
 
 function insertarActor($conexion, $datos) {

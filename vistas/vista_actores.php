@@ -17,13 +17,15 @@
         </div>
         
         <form action="" method="post">
+        <input type="hidden" name="id"
+          value="<?php echo $info['actor_id'] ?? "";?>">
                     <div class="container">
                         <label for="">Nombre</label>
-                        <input type="text" name="nombre" class="form-control" placeholder="Ej: Fulanito.">
+                        <input type="text" name="nombre" value="<?php echo $info['first_name'] ?? "";?>" class="form-control" placeholder="Ej: Fulanito.">
                     </div>
                     <div class="group-form container">
                         <label for="">Apellido</label>
-                        <input name="apellido" type="text" class="form-control" placeholder="Ej: Guayacan.">
+                        <input name="apellido" type="text" <?php echo $info['first_name'] ?? "";?> class="form-control" placeholder="Ej: Guayacan.">
                     </div>
                     <br>
                     <div class= "container">

@@ -27,6 +27,17 @@ if (isset($_POST['guardar'])) {
         $_SESSION['mensaje'] = 'Datos NO INSERTADOS' ;
     }
     }
+
+    if (isset($_GET['editar'])) {
+        $id = $_GET['editar'];
+
+        $resut = obtenerActoresPorId($conexion, $id);
+
+        $info = mysqli_fetch_assoc($result);
+      
+    
+    
+    }
     
 #incluir la vista
 require_once 'vistas/vista_actores.php';
