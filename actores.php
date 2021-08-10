@@ -22,13 +22,13 @@ try{
     
         # validar los datos
         if (empty($nombre)) {
-            throw new Exception("el nombre no puede estar vacio");
+            throw new Exception("El nombre no puede estar vacio.");
         }
     
     
     
         if (empty($apellido)) {
-            throw new Exception("el apellido no puede estar vacio");
+            throw new Exception("El apellido no puede estar vacio.S");
         }
         $datos = compact('nombre', 'apellido');
     
