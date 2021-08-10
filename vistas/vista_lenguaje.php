@@ -5,6 +5,7 @@
   <label id="trigger" for="menu-toggle"></label>
   <label id="burger" for="menu-toggle"></label>
   <ul id="menu">
+    <li><a href="index.php">Home</a></li>
     <li><a href="actores.php">Actores</a></li>
     <li><a href="categoria.php">Categorias</a></li>
     <li><a href="pais.php">Pais</a></li>
@@ -20,7 +21,7 @@
         <form action="" method="post">
                     <div class="container">
                         <label for="">Nombre</label>
-                        <input type="text" name="nombre" class="form-control" placeholder="Ej: Fulanito.">
+                        <input type="text" name="nombre" class="form-control" placeholder="Ej: Patua.">
                     </div>
                     <br>
                     <div class= "container">

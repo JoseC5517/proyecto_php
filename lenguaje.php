@@ -2,7 +2,7 @@
 #incluir el modulo
 require "modelos/modelo_lenguaje.php";
 
-$pagina = "Lenguaje";
+$pagina = "Idiomas";
 
 $lenguajes = obtenerLenguajes($conexion); 
 

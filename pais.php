@@ -2,7 +2,7 @@
 #incluir el modulo
 require "modelos/modelo_pais.php";
 
-$pagina = "Pais";
+$pagina = "Paises";
 
 $paises = obtenerPaises($conexion); 
 

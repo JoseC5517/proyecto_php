@@ -51,11 +51,13 @@ a:focus {
 } */
 h1 {
     line-height: 0;
-    font-size: 4vw;
-    font-weight: 700;
+    font-size: 70px;
+    /* font-weight: 700; */
     text-align: center;
     padding-bottom: 10%;
     padding-top: 10%;
+    font-family: 'Martel', serif;
+
 
 }
 h3 {
@@ -130,7 +132,7 @@ body {
     width: 90px;
     height: 90px;
     background-color: #fff;
-    border-bottom-right-radius: 100%;
+    border-bottom-right-radius: 90%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
     animation: not-checked-anim .2s both;
     transition: .2s;
@@ -152,9 +154,10 @@ body {
 .formBuscar{
     padding-left: 60px;
     display: flex;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 
 }
+
 
 .hola{
     width: 1000px;
@@ -169,20 +172,40 @@ body {
     display: flex;
     text-align: center;
     padding-top: 5px;
+    padding: 10px;
     border-radius: 5px;
-    background-color: teal;
+    background-color: rgb(4, 195, 195);
     margin-left: 10px;
+    border: none;
+    box-shadow: 1px 1px  black;
+}
+.adios:hover{
+    background-color: rgb(0, 139, 139);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    color: white;
+    box-shadow: 3px 3px 3px rgb(0, 97, 48);
 }
 
 button.boton{
     display: flex;
     text-align: center;
-    padding-top: 2px;
+    padding-top: 7px;
+    box-shadow: 1px 1px 1px black;
     border-radius: 5px;
-    background-color: teal;
+    background-color: rgb(4, 195, 195);
     margin-left: 10px;
+    border: none;
+    
     
 }
+.boton:hover{
+    background-color: rgb(0, 139, 139);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    color: white;
+    box-shadow: 3px 3px 3px rgb(0, 97, 48);
+}
+
+
 .bye{
     color: black;
 }
@@ -194,5 +217,10 @@ hr{
 
 a.activo{
     text-decoration: dashed;
-    color: rgb(9, 226, 208);
+    color: rgb(2, 116, 106);
+}
+
+
+table{
+    width: 100000px;
 }

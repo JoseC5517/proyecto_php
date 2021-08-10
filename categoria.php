@@ -2,7 +2,7 @@
 #incluir el modulo
 require "modelos/modelo_categoria.php";
 
-$pagina = "Categoria";
+$pagina = "Categorias";
 
 $categorias = obtenerCategorias($conexion); 
 
