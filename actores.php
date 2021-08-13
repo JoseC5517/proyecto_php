@@ -8,14 +8,14 @@ $actores = obtenerActores($conexion);
 
 
 
-    if (isset($_GET['buscar'])) {
-        $nombre = $_GET['nombre'] ?? "";
-        $actores = obtenerActoresPorNombre($conexion, $nombre);
-    
-        #var_dump($actores);
-    }
-    
-try{ 
+if (isset($_GET['buscar'])) {
+    $nombre = $_GET['nombre'] ?? "";
+    $actores = obtenerActoresPorNombre($conexion, $nombre);
+
+    #var_dump($actores);
+}
+
+try {
     if (isset($_POST['guardar'])) {
         $nombre = $_POST['nombre'] ?? "";
         $apellido = $_POST['apellido'] ?? "";
@@ -31,21 +31,19 @@ try{
         if (empty($apellido)) {
             throw new Exception("El apellido no puede estar vacio.");
         }
-        
+
         $datos = compact('nombre', 'apellido');
 
 
-        if (empty($id)){
+        if (empty($id)) {
             $insertado = insertarActor($conexion, $datos);
-    
+
             if ($insertado) {
                 $_SESSION['mensaje'] = 'Datos insertados correctamente';
-            } 
-            else {
+            } else {
                 $_SESSION['mensaje'] = 'Datos NO INSERTADOS';
             }
-        }
-        else{
+        } else {
             $datos['id'] = $id;
 
             $actualizado = actualizarActor($conexion, $datos);
@@ -54,38 +52,32 @@ try{
                 $_SESSION['mensaje'] = 'Datos actualizados correctamente';
             }
         }
-    
-#eliminar
+        
+    }
 
-    if(isset($_GET['eliminar'])){
+    # eliminar
+    if (isset($_GET['eliminar'])) {
         $id = $_GET['eliminar'];
 
         $eliminado = eliminarActor($conexion, $id);
-    
+
         if ($eliminado) {
             $_SESSION['mensaje'] = 'Eliminado correctamente';
+        } else {
+            $_SESSION['mensaje'] = 'No se pudo eliminar';
         }
-
-    else{
-        $_SESSION['mensaje'] = 'No se pudo eliminar';
+        refrezcar("actores.php");
     }
-    refrezcar("actores.php");
-    }
-}
 
     if (isset($_GET['editar'])) {
         $id = $_GET['editar'];
-    
+
         $result = obtenerActoresPorId($conexion, $id);
 
         $info = mysqli_fetch_assoc($result);
     }
-    
-
-}
-catch(Exception $ex) {
+} catch (Exception $ex) {
     $_SESSION['mensaje'] = $ex->getMessage();
- 
 }
 
 

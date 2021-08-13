@@ -47,7 +47,7 @@ function actualizarActor($conexion, $datos) {
 
 function eliminarActor($conexion, $id) {
 
-    $query ="DELETE FROM film_id WHERE actor_id = $id";
+    $query ="DELETE FROM film_actor WHERE actor_id = $id";
 
     $resultado = mysqli_query($conexion, $query);
 
