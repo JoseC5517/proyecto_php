@@ -7,6 +7,21 @@ $usuario = "root";
 $contrasena = "";
 $base_datos = "sakila";
 
+
+
+//Valores de la base de datos 000webhost
+//editar solamente desde 000webhost
+
+
+if ($_SERVER['SERVER_NAME'] == 'xxxxxxx.000webhostapp.com'){
+    $host = "localhost";
+    $usuario = "xxx";
+    $contrasena = "xxx";
+    $base_datos = "xxx";
+}
+
+
+
 $conexion = mysqli_connect($host, $usuario, $contrasena, $base_datos);
 
 if (!$conexion){
