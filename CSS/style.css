@@ -21,7 +21,10 @@
         height: 3000px;
     }
 }
-li, a {
+
+
+
+li, .menu {
     margin: 75px 0 -55px 0;
     color: #03A9F4;
     font: 14pt "Roboto", sans-serif;
@@ -36,7 +39,7 @@ li, a {
 li {
     width: 230px;
     text-indent: 56px;}
-a:focus {
+.menu:focus {
     display: block;
     color: #333;
     background-color: #eee;
@@ -140,7 +143,7 @@ body {
 #menu-toggle:checked + #trigger + #burger + #menu {
     animation: checked-anim 1s ease both;
 }
-#menu-toggle:checked + #trigger ~ #menu > li, a {
+#menu-toggle:checked + #trigger ~ #menu > li, a.menu {
     display: block;
 }
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
@@ -221,6 +224,14 @@ a.activo{
 }
 
 
-table{
-    width: 100000px;
+.holis{
+    display: flex;
+    /* text-decoration: none; */
+    flex: 100px;
 }
+
+ i{
+    padding-right: 10px;
+    width: 30px;
+    size: 60px;
+} 

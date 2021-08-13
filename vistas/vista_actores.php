@@ -4,11 +4,11 @@
   <label id="trigger" for="menu-toggle"></label>
   <label id="burger" for="menu-toggle"></label>
   <ul id="menu">
-    <li><a href="index.php">Home</a></li>
-    <li><a class="activo" href="actores.php">Actores</a></li>
-    <li><a href="categoria.php">Categorias</a></li>
-    <li><a href="pais.php">Pais</a></li>
-    <li><a href="lenguaje.php">Idiomas</a></li>
+    <li><a class="menu" href="index.php">Home</a></li>
+    <li><a class="menu activo" href="actores.php">Actores</a></li>
+    <li><a class="menu" href="categoria.php">Categorias</a></li>
+    <li><a class="menu" href="pais.php">Pais</a></li>
+    <li><a class="menu" href="lenguaje.php">Idiomas</a></li>
   </ul>
 <div class="web">
 <div class="">
@@ -18,15 +18,14 @@
         </div>
         
         <form action="" method="post">
-        <input type="hidden" name="id"
-          value="<?php echo $info['actor_id'] ?? "";?>">
+        <input type="hidden" name="id" value="<?php echo $info['actor_id'] ?? "";?>">
                     <div class="container">
                         <label for="">Nombre</label>
                         <input type="text" name="nombre" value="<?php echo $info['first_name'] ?? "";?>" class="form-control" placeholder="Ej: Fulanito.">
                     </div>
                     <div class="group-form container">
                         <label for="">Apellido</label>
-                        <input name="apellido" type="text" <?php echo $info['first_name'] ?? "";?> class="form-control" placeholder="Ej: Guayacan.">
+                        <input name="apellido" type="text" value="<?php echo $info['last_name'] ?? "";?>" class="form-control" placeholder="Ej: Guayacan.">
                     </div>
                     <br>
                     <div class= "container">
@@ -57,6 +56,7 @@
               <th scope="col">First_name</th>
               <th scope="col">Last_name</th>
               <th scope="col">Last_update</th>
+              <th scope="col">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -67,6 +67,10 @@
                             <td>{$actor['first_name']}</td>
                             <td>{$actor['last_name']}</td>
                             <td>{$actor['last_update']}</td>
+                            <td class ='holis'>
+                              <a href='actores.php?editar={$actor['actor_id']}'><i class='far fa-edit'></i></a>
+                              <a href='actores.php?eliminar={$actor['actor_id']}'><i class='fas fa-backspace'></i></a>
+                            </td>
                         </tr>";
                 }
               ?>

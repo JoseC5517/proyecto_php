@@ -4,23 +4,25 @@
   <label id="trigger" for="menu-toggle"></label>
   <label id="burger" for="menu-toggle"></label>
   <ul id="menu">
-    <li><a href="index.php">Home</a></li>
-    <li><a href="actores.php">Actores</a></li>
-    <li><a class="activo" href="categoria.php">Categorias</a></li>
-    <li><a href="pais.php">Pais</a></li>
-    <li><a href="lenguaje.php">Idiomas</a></li>
+    <li><a class="menu" href="index.php">Home</a></li>
+    <li><a class="menu" href="actores.php">Actores</a></li>
+    <li><a class="menu activo" href="categoria.php">Categorias</a></li>
+    <li><a class="menu" href="pais.php">Pais</a></li>
+    <li><a class="menu" href="lenguaje.php">Idiomas</a></li>
   </ul>
 <div class="web">
 <div class="">
+  
             <div class="container">
                 <h1 class=""><?php echo $pagina; ?></h1>
             </div>
         </div>
         
         <form action="" method="post">
+        <input type="hidden" name="id" value= "<?php echo $info['category_id'] ?? '';?>">
                     <div class="container">
                         <label for="">Nombre</label>
-                        <input type="text" name="nombre" class="form-control" placeholder="Ej: Horror.">
+                        <input type="text" name="nombre" value="<?php echo $info['name'] ?? "";?>" class="form-control" placeholder="Ej: Horror.">
                     </div>
                     <br>
                     <div class= "container">
@@ -51,6 +53,7 @@
               <th scope="col">Category_id</th>
               <th scope="col">Name</th>
               <th scope="col">Last_update</th>
+              <th scope="col">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -60,6 +63,10 @@
                             <th scope='row'>{$categoria['category_id']}</th>
                             <td>{$categoria['name']}</td>
                             <td>{$categoria['last_update']}</td>
+                            <td class ='holis'>
+                            <a href='categoria.php?editar={$categoria['category_id']}'><i class='far fa-edit'></i></a>
+                            <a href='categoria.php?eliminar={$categoria['category_id']}'><i class='fas fa-backspace'></i></a>
+                            </td>
                         </tr>";
                 }
               ?>

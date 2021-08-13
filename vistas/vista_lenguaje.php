@@ -5,11 +5,11 @@
   <label id="trigger" for="menu-toggle"></label>
   <label id="burger" for="menu-toggle"></label>
   <ul id="menu">
-    <li><a href="index.php">Home</a></li>
-    <li><a href="actores.php">Actores</a></li>
-    <li><a href="categoria.php">Categorias</a></li>
-    <li><a href="pais.php">Pais</a></li>
-    <li><a class="activo" href="lenguaje.php">Idiomas</a></li>
+    <li><a class="menu" href="index.php">Home</a></li>
+    <li><a class="menu" href="actores.php">Actores</a></li>
+    <li><a class="menu" href="categoria.php">Categorias</a></li>
+    <li><a class="menu" href="pais.php">Pais</a></li>
+    <li><a class="menu activo" href="lenguaje.php">Idiomas</a></li>
   </ul>
 <div class="web">
 <div class="">
@@ -19,9 +19,10 @@
         </div>
         
         <form action="" method="post">
+        <input type="hidden" name="id" value= "<?php echo $info['language_id'] ?? '';?>">
                     <div class="container">
                         <label for="">Nombre</label>
-                        <input type="text" name="nombre" class="form-control" placeholder="Ej: Patua.">
+                        <input type="text" name="nombre" value="<?php echo $info['name'] ?? "";?>" class="form-control" placeholder="Ej: Patua.">
                     </div>
                     <br>
                     <div class= "container">
@@ -52,6 +53,7 @@
               <th scope="col">Languaje_id</th>
               <th scope="col">Name</th>
               <th scope="col">Last_update</th>
+              <th scope="col">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -61,6 +63,10 @@
                             <th scope='row'>{$lenguaje['language_id']}</th>
                             <td>{$lenguaje['name']}</td>
                             <td>{$lenguaje['last_update']}</td>
+                            <td class ='holis'>
+                            <a href='lenguaje.php?editar={$lenguaje['language_id']}'><i class='far fa-edit'></i></a>
+                            <a href='lenguaje.php?eliminar={$lenguaje['language_id']}'><i class='fas fa-backspace'></i></a>
+                          </td>
                         </tr>";
                 }
               ?>

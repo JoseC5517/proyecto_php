@@ -26,3 +26,28 @@ function insertarLenguaje($conexion, $datos){
 
     return $resultado;
 }
+
+function obtenerLenguajePorId($conexion, $id) {
+    $query = "SELECT * FROM language WHERE language_id = $id";
+
+    $resultado = mysqli_query($conexion,$query);
+
+    return $resultado;
+}
+
+function actualizarLenguaje($conexion, $datos) {
+    $query ="UPDATE language SET name='{$datos['nombre']}' WHERE language_id = '{$datos['id']}'";
+
+    $resultado = mysqli_query($conexion, $query);
+    
+    return $resultado;
+}
+
+function eliminarLenguaje($conexion, $id) {
+    
+    $query ="DELETE FROM language WHERE language_id = $id";
+
+    $resultado = mysqli_query($conexion, $query);
+    
+    return $resultado;
+}

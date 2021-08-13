@@ -36,3 +36,25 @@ function insertarActor($conexion, $datos) {
     
     return $resultado;
 }
+
+function actualizarActor($conexion, $datos) {
+    $query ="UPDATE actor SET first_name='{$datos['nombre']}',last_name='{$datos['apellido']}' WHERE actor_id = {$datos['id']}";
+
+    $resultado = mysqli_query($conexion, $query);
+    
+    return $resultado;
+}
+
+function eliminarActor($conexion, $id) {
+
+    $query ="DELETE FROM film_id WHERE actor_id = $id";
+
+    $resultado = mysqli_query($conexion, $query);
+
+
+    $query ="DELETE FROM actor WHERE actor_id = $id";
+
+    $resultado = mysqli_query($conexion, $query);
+    
+    return $resultado;
+}

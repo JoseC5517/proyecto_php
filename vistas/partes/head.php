@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a48cc2b41f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/style.css">
     <title><?php echo $pagina;?></title>
   </head>

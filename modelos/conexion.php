@@ -14,3 +14,7 @@ if (!$conexion){
 }else{
     // echo "conexion exitosa";
 }
+
+function refrezcar($nombrepagina){
+    header("location: $nombrepagina", true, 303);
+}
